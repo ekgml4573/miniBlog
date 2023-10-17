@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Blog🌱</title>
+</head>
+<body>
+<form method="get" align="center">
+    <h2>Mini Blog🌱</h2>
+
+    <table border="1" align="center">
+        <tr>
+            <td>id</td>
+            <td>제목</td>
+            <td>작성일</td>
+            <td>작성자</td>
+        </tr>
+
+        <tr th:each="list : ${list}">
+            <td th:text="${list.id}"></td>
+            <td th:text="${list.title}"></td>
+            <td th:text="${list.uploadedAt}"></td>
+            <td th:text="${list.userId}"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
